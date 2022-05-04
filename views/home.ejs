@@ -1,0 +1,20 @@
+<%- include('./partials/header.ejs'); -%>
+
+<h1>Home</h1>
+
+<p><%= homeContent %> </p>
+
+
+<% homePosts.forEach(function(eachPost){ %>
+    <div>
+        <h4><%= eachPost.titleItem %></h4>
+        <p><%=eachPost.postItem.slice(0, 203)+'...'; %> 
+        <a href="posts/<%= eachPost.titleItem %>">Read More</a> 
+        </p>
+        
+    </div>   
+<% }) %>
+
+
+
+<%- include('./partials/footer.ejs'); -%>
